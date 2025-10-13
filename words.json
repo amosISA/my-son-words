@@ -1,71 +1,92 @@
 [
   {
     "sonWord": "elo",
-    "realWord": "hola"
+    "realWord": "hola",
+    "son": "Liam"
   },
   {
     "sonWord": "aua",
-    "realWord": "agua"
+    "realWord": "agua",
+    "son": "Liam"
   },
   {
     "sonWord": "am",
-    "realWord": "Liam"
+    "realWord": "Liam",
+    "son": "Liam"
   },
   {
     "sonWord": "a pu a ma",
-    "realWord": "Pon la mano"
+    "realWord": "Pon la mano",
+    "son": "Liam"
   },
   {
     "sonWord": "pake",
-    "realWord": "Parque"
+    "realWord": "Parque",
+    "son": "Liam"
   },
   {
     "sonWord": "ete no",
-    "realWord": "Este no"
+    "realWord": "Este no",
+    "son": "Liam"
   },
   {
     "sonWord": "Vamo allá!",
-    "realWord": "Vamos allá!"
+    "realWord": "Vamos allá!",
+    "son": "Liam"
   },
   {
     "sonWord": "Adio",
-    "realWord": "Adiós!"
+    "realWord": "Adiós!",
+    "son": "Liam"
   },
   {
     "sonWord": "no paya",
-    "realWord": "No Playa"
+    "realWord": "No Playa",
+    "son": "Liam"
   },
   {
     "sonWord": "MaMoToTó",
-    "realWord": "Melocotón"
+    "realWord": "Melocotón",
+    "son": "Liam"
   },
   {
     "sonWord": "toyo",
-    "realWord": "Antonio (amigo cole)"
+    "realWord": "Antonio (amigo cole)",
+    "son": "Liam"
   },
   {
     "sonWord": "tole",
-    "realWord": "Cole"
+    "realWord": "Cole",
+    "son": "Liam"
   },
   {
     "sonWord": "pawa",
-    "realWord": "Pala"
+    "realWord": "Pala",
+    "son": "Liam"
   },
   {
     "sonWord": "pawo",
-    "realWord": "Palo"
+    "realWord": "Palo",
+    "son": "Liam"
   },
   {
     "sonWord": "raww",
-    "realWord": "Dinosaurio"
+    "realWord": "Dinosaurio",
+    "son": "Liam"
   },
-  ,
   {
     "sonWord": "bo, ia",
-    "realWord": "Bon dia"
+    "realWord": "Bon dia",
+    "son": "Liam"
   },
   {
     "sonWord": "aña",
-    "realWord": "Araña"
+    "realWord": "Araña",
+    "son": "Liam"
+  },
+  {
+    "sonWord": "arrggg",
+    "realWord": "poo",
+    "son": "Oliver"
   }
 ]

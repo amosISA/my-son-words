@@ -60,16 +60,55 @@
             transform: rotateY(180deg);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
+        .word-card-oliver .word-card-front {
+            background-color: rgba(255, 165, 0, 0.7); /* Orange for Oliver */
+        }
+        .word-card-oliver .word-card-back {
+            background-color: rgba(139, 69, 19, 0.7); /* Darker Orange for Oliver */
+        }
+        .filter-buttons {
+            margin-bottom: 1rem;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+        .filter-btn {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            font-family: 'Indie Flower', cursive;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        .filter-btn:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+        .filter-btn.active {
+            background-color: #a7f3d0; /* Tailwind emerald-200 */
+            font-weight: bold;
+        }
     </style>
 </head>
-<body class="min-h-screen flex flex-wrap justify-center items-center p-4">
+<body class="relative flex flex-wrap items-center justify-center min-h-screen p-4">
 
-    <div id="words-container" class="flex flex-wrap justify-center items-center">
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-son="all">All</button>
+        <button class="filter-btn" data-son="Liam">Liam</button>
+        <button class="filter-btn" data-son="Oliver">Oliver</button>
+    </div>
+
+    <div id="words-container" class="flex flex-wrap items-center justify-center mt-20">
         <!-- Words will be injected here by JavaScript -->
     </div>
 
     <audio id="background-music" src="audio/bymyside.mp4" loop muted></audio>
-    <button id="music-toggle" class="fixed bottom-4 right-4 bg-blue-500 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg">
+    <button id="music-toggle" class="fixed p-3 text-white bg-blue-500 rounded-full shadow-lg bottom-4 right-4 hover:bg-blue-700">
         <span id="music-icon">🔊</span>
     </button>
 
