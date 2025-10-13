@@ -67,12 +67,10 @@
             background-color: rgba(139, 69, 19, 0.7); /* Darker Orange for Oliver */
         }
         .filter-buttons {
-            margin-bottom: 1rem;
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10;
+            display: flex;
+            gap: 1rem; /* Add spacing between buttons */
+            padding: 0.5rem;
+            border-radius: 0.5rem;
         }
         .filter-btn {
             background-color: rgba(255, 255, 255, 0.8);
@@ -97,12 +95,13 @@
             background-color: rgba(255, 255, 255, 0.7); /* Liam's card front color */
             color: #2d3748; /* Liam's card front text color */
         }
-        .filter-oliver.active {
+        .filter-oliver {
             background-color: rgba(255, 165, 0, 0.7); /* Oliver's card front color */
             color: #2d3748; /* Ensure text is readable */
         }
         .filter-btn[data-son="all"].active {
-            background-color: #a7f3d0; /* Default active color for All */
+            background-color: rgba(147, 197, 253, 0.7); /* A light blue for 'All' */
+            color: #2d3748;
         }
     </style>
 </head>
@@ -114,12 +113,12 @@
         <button class="filter-btn filter-oliver" data-son="Oliver">Oliver</button>
     </div>
 
-    <div id="words-container" class="flex flex-wrap items-center justify-center mt-20">
+    <div id="words-container" class="flex flex-wrap items-center justify-center mt-32">
         <!-- Words will be injected here by JavaScript -->
     </div>
 
     <audio id="background-music" src="audio/bymyside.mp4" loop muted></audio>
-    <button id="music-toggle" class="fixed p-3 text-white bg-blue-500 rounded-full shadow-lg bottom-4 right-4 hover:bg-blue-700">
+    <button id="music-toggle" class="fixed p-3 text-white bg-blue-500 rounded-full shadow-lg bottom-4 right-4 hover:bg-blue-700" style="position: absolute; top: 30px; right: 30px;">
         <span id="music-icon">🔊</span>
     </button>
 
