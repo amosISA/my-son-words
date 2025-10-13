@@ -93,14 +93,25 @@
             background-color: #a7f3d0; /* Tailwind emerald-200 */
             font-weight: bold;
         }
+        .filter-liam.active {
+            background-color: rgba(255, 255, 255, 0.7); /* Liam's card front color */
+            color: #2d3748; /* Liam's card front text color */
+        }
+        .filter-oliver.active {
+            background-color: rgba(255, 165, 0, 0.7); /* Oliver's card front color */
+            color: #2d3748; /* Ensure text is readable */
+        }
+        .filter-btn[data-son="all"].active {
+            background-color: #a7f3d0; /* Default active color for All */
+        }
     </style>
 </head>
 <body class="relative flex flex-wrap items-center justify-center min-h-screen p-4">
 
     <div class="filter-buttons">
         <button class="filter-btn active" data-son="all">All</button>
-        <button class="filter-btn" data-son="Liam">Liam</button>
-        <button class="filter-btn" data-son="Oliver">Oliver</button>
+        <button class="filter-btn filter-liam" data-son="Liam">Liam</button>
+        <button class="filter-btn filter-oliver" data-son="Oliver">Oliver</button>
     </div>
 
     <div id="words-container" class="flex flex-wrap items-center justify-center mt-20">
