@@ -27,12 +27,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const frontFace = document.createElement('div');
             frontFace.classList.add('word-card-face', 'word-card-front', 'text-xl',
                 'font-bold');
-            frontFace.textContent = word.sonWord;
+            const frontSpan = document.createElement('span');
+            frontSpan.textContent = word.sonWord;
+            frontFace.appendChild(frontSpan);
 
             const backFace = document.createElement('div');
             backFace.classList.add('word-card-face', 'word-card-back', 'text-xl',
                 'font-bold');
-            backFace.textContent = word.realWord;
+            const backSpan = document.createElement('span');
+            backSpan.textContent = word.realWord;
+            backFace.appendChild(backSpan);
 
             card.appendChild(frontFace);
             card.appendChild(backFace);

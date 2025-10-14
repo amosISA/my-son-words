@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
             background-image: url('images/liam.jpg');
             background-size: cover;
             background-repeat: no-repeat;
@@ -49,6 +53,10 @@
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+        .word-card-face span {
+            text-align: center;
+            display: block; /* Ensure span takes full width to center text */
+        }
         .word-card-front {
             background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent white */
             color: #2d3748; /* Tailwind gray-800 */
@@ -67,10 +75,12 @@
             background-color: rgba(139, 69, 19, 0.7); /* Darker Orange for Oliver */
         }
         .filter-buttons {
+            margin-bottom: 1rem;
             display: flex;
             gap: 1rem; /* Add spacing between buttons */
             padding: 0.5rem;
             border-radius: 0.5rem;
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background for the container */
         }
         .filter-btn {
             background-color: rgba(255, 255, 255, 0.8);
@@ -105,7 +115,7 @@
         }
     </style>
 </head>
-<body class="relative flex flex-wrap items-center justify-center min-h-screen p-4">
+<body class="min-h-screen flex flex-col items-center p-4">
 
     <div class="filter-buttons">
         <button class="filter-btn active" data-son="all">All</button>
@@ -113,7 +123,7 @@
         <button class="filter-btn filter-oliver" data-son="Oliver">Oliver</button>
     </div>
 
-    <div id="words-container" class="flex flex-wrap items-center justify-center mt-32">
+    <div id="words-container" class="flex flex-wrap justify-center items-center mt-16">
         <!-- Words will be injected here by JavaScript -->
     </div>
 
