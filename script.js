@@ -7,6 +7,50 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+// --- Password Protection ---
+// Change this password to whatever you want to share with your wife
+const FAMILY_PASSWORD = 'liamoliver';
+
+function checkAuth() {
+  const lockScreen = document.getElementById('lock-screen');
+  const appContent = document.getElementById('app-content');
+  
+  // Check if already authenticated
+  if (localStorage.getItem('family-auth') === 'true') {
+    lockScreen.style.display = 'none';
+    appContent.style.display = 'flex';
+    appContent.style.flexDirection = 'column';
+    appContent.style.alignItems = 'center';
+    return;
+  }
+
+  const submitBtn = document.getElementById('password-submit');
+  const passwordInput = document.getElementById('password-input');
+  const errorMsg = document.getElementById('password-error');
+
+  const tryLogin = () => {
+    const entered = passwordInput.value.trim().toLowerCase();
+    if (entered === FAMILY_PASSWORD) {
+      localStorage.setItem('family-auth', 'true');
+      lockScreen.style.display = 'none';
+      appContent.style.display = 'flex';
+      appContent.style.flexDirection = 'column';
+      appContent.style.alignItems = 'center';
+    } else {
+      errorMsg.style.display = 'block';
+      passwordInput.value = '';
+      passwordInput.focus();
+    }
+  };
+
+  submitBtn.addEventListener('click', tryLogin);
+  passwordInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') tryLogin();
+  });
+}
+
+checkAuth();
+
 document.addEventListener('DOMContentLoaded', () => {
     const wordsContainer = document.getElementById('words-container');
     const backgroundMusic = document.getElementById('background-music');
